@@ -104,9 +104,9 @@ def generate_chart_base64(df):
 
 def style_zone(zone):
     if zone == "Buy":
-        return '<span style="background-color:#d4edda; color:#155724; padding:4px 8px; border-radius:8px;">Buy</span>'
+        return '<span style="background-color:#28a745; color:white; padding:4px 10px; border-radius:8px; font-weight:bold;">Buy</span>'
     elif zone == "Sell":
-        return '<span style="background-color:#f8d7da; color:#721c24; padding:4px 8px; border-radius:8px;">Sell</span>'
+        return '<span style="background-color:#dc3545; color:white; padding:4px 10px; border-radius:8px; font-weight:bold;">Sell</span>'
     else:
         return '<span style="background-color:#e2e3e5; color:#383d41; padding:4px 8px; border-radius:8px;">Neutral</span>'
 
@@ -197,6 +197,7 @@ csv = df_results.to_csv(index=False).encode('utf-8')
 st.download_button("📥 Download CSV", csv, "trading_zones.csv", "text/csv")
 
 st.caption("Data from Yahoo Finance (via yfinance). Not financial advice. 😉")
+
 
 
 
